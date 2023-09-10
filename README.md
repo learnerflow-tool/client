@@ -1,22 +1,18 @@
 LearnerFlow client
 =================
 
-This client is a customized version of the ['hypothesis/client'](https://github.com/hypothesis/client)with the following modifications:
+This custom version of the Hypothesis client has been adapted from the original [`hypothesis/client`](https://github.com/hypothesis/client) to include several enhancements:
 
-New Granular Tagging Categories:
+1. **New Granular Tagging Categories**: We've introduced additional tagging categories, including "Comment," "Important," "Errata," "Interesting," "Confusing," and "Question." These tags allow for more precise annotation categorization.
 
-Comment
-Important
-Errata
-Interesting
-Confusing
-Question
-Upvote Feature:
+2. **Upvote Feature**: We've added an upvote feature for posts, providing users with the ability to endorse annotations or comments.
 
-Users can now upvote posts.
-Enhanced Analytics:
+3. **Enhanced Analytics**: Our customized client includes enhanced analytics capabilities that track every click, keypress, and scroll on the page. This feature provides valuable insights into user interactions and behaviors within the platform.
 
-Detailed analytics track every click, keypress, and scroll on the page.
+Feel free to explore these enhancements and provide feedback on their functionality.
+
+For the original Hypothesis client repository, please visit [here](https://github.com/hypothesis/client).
+
 To explore these additions, simply clone or download this repository and follow the installation instructions provided. Enjoy exploring the enhanced features!
 
 
