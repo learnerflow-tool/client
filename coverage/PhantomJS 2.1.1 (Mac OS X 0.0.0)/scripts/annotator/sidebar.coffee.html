@@ -1,0 +1,552 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/annotator/sidebar.coffee</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">scripts/annotator/</a> sidebar.coffee
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">83.19% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>99/119</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">60.53% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>23/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">61.54% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>16/26</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">62.26% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>33/53</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">15 statements, 3 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">extend = require('extend')
+raf = require('raf')
+Hammer = require('hammerjs')
+&nbsp;
+Host = require('./host')
+&nbsp;
+# Minimum width to which the frame can be resized.
+MIN_RESIZE = 280
+&nbsp;
+&nbsp;
+module.exports = class Sidebar extends Host
+  options:
+    Document: {}
+    TextSelection: {}
+    BucketBar:
+      container: '.annotator-frame'
+    Toolbar:
+      container: '.annotator-frame'
+&nbsp;
+  renderFrame: null
+  gestureState: null
+&nbsp;
+  constructor: (element, options) -&gt;
+    super
+    this.hide()
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if options.openSidebar || options.annotations
+<span class="cstat-no" title="statement not covered" >      this.on 'panelReady', <span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" >=</span></span>&gt; this.show()</span>
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if @plugins.BucketBar?
+<span class="cstat-no" title="statement not covered" >      @plugins.BucketBar.element.on 'click', <span class="fstat-no" title="function not covered" ><span class="fstat-no" title="function not covered" >(</span></span>event) =&gt; this.show()</span>
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if @plugins.Toolbar?
+<span class="cstat-no" title="statement not covered" >      this._setupGestures()</span>
+&nbsp;
+    this._setupSidebarEvents()
+&nbsp;
+  _setupDocumentEvents: -&gt;
+    @element.on 'click', <span class="fstat-no" title="function not covered" >(event) =&gt;</span>
+<span class="cstat-no" title="statement not covered" >      if !@selectedTargets?.length</span>
+        this.hide()
+    return this
+&nbsp;
+  _setupSidebarEvents: -&gt;
+    @crossframe.on('show', this.show.bind(this))
+    @crossframe.on('hide', this.hide.bind(this))
+&nbsp;
+    # Return this for chaining
+    this
+&nbsp;
+  _setupGestures: <span class="fstat-no" title="function not covered" >-&gt;</span>
+<span class="cstat-no" title="statement not covered" >    $toggle = @</span>toolbar.find('[name=sidebar-toggle]')
+&nbsp;
+    # Prevent any default gestures on the handle
+<span class="cstat-no" title="statement not covered" >    $</span>toggle.on('touchmove', <span class="fstat-no" title="function not covered" >(</span>event) -&gt; event.preventDefault())
+&nbsp;
+    # Set up the Hammer instance and handlers
+<span class="cstat-no" title="statement not covered" >    mgr = new H</span>ammer.Manager($toggle[0])
+    .on('panstart panend panleft panright', this.onPan)
+    .on('swipeleft swiperight', this.onSwipe)
+&nbsp;
+    # Set up the gesture recognition
+<span class="cstat-no" title="statement not covered" >    pan = m</span>gr.add(new Hammer.Pan({direction: Hammer.DIRECTION_HORIZONTAL}))
+<span class="cstat-no" title="statement not covered" >    swipe = m</span>gr.add(new Hammer.Swipe({direction: Hammer.DIRECTION_HORIZONTAL}))
+<span class="cstat-no" title="statement not covered" >    s</span>wipe.recognizeWith(pan)
+&nbsp;
+    # Set up the initial state
+<span class="cstat-no" title="statement not covered" >    t</span>his._initializeGestureState()
+&nbsp;
+    # Return this for chaining
+    this
+&nbsp;
+  _initializeGestureState: -&gt;
+    @gestureState =
+      initial: null
+      final: null
+&nbsp;
+  # Schedule any changes needed to update the sidebar layout.
+  _updateLayout: -&gt;
+    # Only schedule one frame at a time
+    return if @renderFrame
+&nbsp;
+    # Schedule a frame
+    @renderFrame = raf =&gt;
+      @renderFrame = null  # Clear the schedule
+&nbsp;
+      # Process the resize gesture
+      <span class="missing-if-branch" title="else path not taken" >E</span>if @gestureState.final isnt @gestureState.initial
+        m = @gestureState.final
+        w = -m
+        @frame.css('margin-left', "#{m}px")
+        <span class="missing-if-branch" title="if path not taken" >I</span>if w &gt;= MIN_RESIZE then @frame.css('width', "#{w}px")
+&nbsp;
+  onPan: (event) =&gt;
+    switch event.type
+      when 'panstart'
+        # Initialize the gesture state
+        this._initializeGestureState()
+        # Immadiate response
+        @frame.addClass 'annotator-no-transition'
+        # Escape iframe capture
+        @frame.css('pointer-events', 'none')
+        # Set origin margin
+        @gestureState.initial = parseInt(getComputedStyle(@frame[0]).marginLeft)
+&nbsp;
+      when 'panend'
+        # Re-enable transitions
+        @frame.removeClass 'annotator-no-transition'
+        # Re-enable iframe events
+        @frame.css('pointer-events', '')
+        # Snap open or closed
+        if @gestureState.final &lt;= -MIN_RESIZE
+          this.show()
+        else
+          this.hide()
+        # Reset the gesture state
+        this._initializeGestureState()
+&nbsp;
+      when 'panleft', 'panright'
+<span class="cstat-no" title="statement not covered" >        <span class="missing-if-branch" title="if path not taken" >I</span>r</span>eturn unless @gestureState.initial?
+        # Compute new margin from delta and initial conditions
+        m = @gestureState.initial
+        d = event.deltaX
+        @gestureState.final = Math.min(Math.round(m + d), 0)
+        # Start updating
+        this._updateLayout()
+&nbsp;
+  onSwipe: (event) =&gt;
+    switch event.type
+      when 'swipeleft'
+        this.show()
+      when 'swiperight'
+        this.hide()
+&nbsp;
+  show: <span class="fstat-no" title="function not covered" >-</span>&gt;
+<span class="cstat-no" title="statement not covered" >    @</span>crossframe.call('sidebarOpened')
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    @frame.css '</span>margin-left': "#{-1 * @frame.width()}px"
+<span class="cstat-no" title="statement not covered" >    @</span>frame.removeClass 'annotator-collapsed'
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    if @toolbar?</span>
+      @toolbar.find('[name=sidebar-toggle]')
+      .removeClass('h-icon-chevron-left')
+      .addClass('h-icon-chevron-right')
+&nbsp;
+  hide: -&gt;
+    @frame.css 'margin-left': ''
+    @frame.addClass 'annotator-collapsed'
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if @toolbar?
+      @toolbar.find('[name=sidebar-toggle]')
+      .removeClass('h-icon-chevron-right')
+      .addClass('h-icon-chevron-left')
+&nbsp;
+  createAnnotation: <span class="fstat-no" title="function not covered" >(<span class="cstat-no" title="statement not covered" ></span>annotation = {</span>}) -&gt;
+<span class="cstat-no" title="statement not covered" >    s</span>uper
+<span class="cstat-no" title="statement not covered" >    this.show() unless annotation.$highlight</span>
+&nbsp;
+  showAnnotations: <span class="fstat-no" title="function not covered" >(</span>annotations) -&gt;
+<span class="cstat-no" title="statement not covered" >    s</span>uper
+    this.show()
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Nov 02 2016 11:41:39 GMT+1100 (AEDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

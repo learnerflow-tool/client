@@ -1,0 +1,500 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/directive/thread-list.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">scripts/directive/</a> thread-list.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">65.91% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>29/44</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">41.67% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>5/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">66.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>8/12</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">65.91% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>29/44</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">3×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+var events = require('../events');
+var metadata = require('../annotation-metadata');
+&nbsp;
+/**
+ * Component which displays a virtualized list of annotation threads.
+ */
+&nbsp;
+var scopeTimeout = require('../util/scope-timeout');
+&nbsp;
+/**
+ * Returns the height of the thread for an annotation if it exists in the view
+ * or undefined otherwise.
+ */
+<span class="fstat-no" title="function not covered" >function getThreadHeight(id) {</span>
+<span class="cstat-no" title="statement not covered" >  v</span>ar threadElement = document.getElementById(id);
+<span class="cstat-no" title="statement not covered" >  if (!threadElement) {</span>
+<span class="cstat-no" title="statement not covered" >    r</span>eturn null;
+  }
+&nbsp;
+  // Get the height of the element inside the border-box, excluding
+  // top and bottom margins.
+<span class="cstat-no" title="statement not covered" >  v</span>ar elementHeight = threadElement.getBoundingClientRect().height;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  v</span>ar style = window.getComputedStyle(threadElement);
+&nbsp;
+  // Get the bottom margin of the element. style.margin{Side} will return
+  // values of the form 'Npx', from which we extract 'N'.
+<span class="cstat-no" title="statement not covered" >  v</span>ar marginHeight = parseFloat(style.marginTop) +
+                     parseFloat(style.marginBottom);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >  r</span>eturn elementHeight + marginHeight;
+}
+&nbsp;
+// @ngInject
+function ThreadListController($scope, VirtualThreadList) {
+  // `visibleThreads` keeps track of the subset of all threads matching the
+  // current filters which are in or near the viewport and the view then renders
+  // only those threads, using placeholders above and below the visible threads
+  // to reserve space for threads which are not actually rendered.
+  var self = this;
+  var visibleThreads = new VirtualThreadList($scope, window, this.thread);
+  visibleThreads.on('changed', function (state) {
+    self.virtualThreadList = {
+      visibleThreads: state.visibleThreads,
+      offscreenUpperHeight: state.offscreenUpperHeight + 'px',
+      offscreenLowerHeight: state.offscreenLowerHeight + 'px',
+    };
+&nbsp;
+    scopeTimeout($scope, <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >      s</span>tate.visibleThreads.forEach(<span class="fstat-no" title="function not covered" >function (thread) {</span>
+<span class="cstat-no" title="statement not covered" >        v</span>ar height = getThreadHeight(thread.id);
+<span class="cstat-no" title="statement not covered" >        if (!height) {</span>
+<span class="cstat-no" title="statement not covered" >          r</span>eturn;
+        }
+<span class="cstat-no" title="statement not covered" >        v</span>isibleThreads.setThreadHeight(thread.id, height);
+      });
+    }, 50);
+  });
+&nbsp;
+  /**
+   * Return the vertical scroll offset for the document in order to position the
+   * annotation thread with a given `id` or $tag at the top-left corner
+   * of the view.
+   */
+  function scrollOffset(id) {
+    // Note: This assumes that the element occupies the entire height of the
+    // containing document. It would be preferable if only the contents of the
+    // &lt;thread-list&gt; itself scrolled.
+    var maxYOffset = document.body.clientHeight - window.innerHeight;
+    return Math.min(maxYOffset, visibleThreads.yOffsetOf(id));
+  }
+&nbsp;
+  /** Scroll the annotation with a given ID or $tag into view. */
+  function scrollIntoView(id) {
+    var estimatedYOffset = scrollOffset(id);
+    window.scroll(0, estimatedYOffset);
+&nbsp;
+    // As a result of scrolling the sidebar, the target scroll offset for
+    // annotation `id` might have changed as a result of:
+    //
+    // 1. Heights of some cards above `id` changing from an initial estimate to
+    //    an actual measured height after the card is rendered.
+    // 2. The height of the document changing as a result of any cards heights'
+    //    changing. This may affect the scroll offset if the original target
+    //    was near to the bottom of the list.
+    //
+    // So we wait briefly after the view is scrolled then check whether the
+    // estimated Y offset changed and if so, trigger scrolling again.
+    scopeTimeout($scope, <span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >      v</span>ar newYOffset = scrollOffset(id);
+<span class="cstat-no" title="statement not covered" >      if (newYOffset !== estimatedYOffset) {</span>
+<span class="cstat-no" title="statement not covered" >        s</span>crollIntoView(id);
+      }
+    }, 200);
+  }
+&nbsp;
+  $scope.$on(events.BEFORE_ANNOTATION_CREATED, function (event, annotation) {
+    if (annotation.$highlight || metadata.isReply(annotation)) {
+      return;
+    }
+    self.onClearSelection();
+    scrollIntoView(annotation.$tag);
+  });
+&nbsp;
+  this.$onChanges = function (changes) {
+    <span class="missing-if-branch" title="else path not taken" >E</span>if (changes.thread) {
+      visibleThreads.setRootThread(changes.thread.currentValue);
+    }
+  };
+&nbsp;
+  this.$onDestroy = function () {
+    visibleThreads.detach();
+  };
+}
+&nbsp;
+module.exports = function () {
+  return {
+    bindToController: true,
+    controller: ThreadListController,
+    controllerAs: 'vm',
+    restrict: 'E',
+    scope: {
+      /** The root thread to be displayed by the thread list. */
+      thread: '&lt;',
+      showDocumentInfo: '&lt;',
+&nbsp;
+      /**
+       * Called when the user clicks a link to show an annotation that does not
+       * match the current filter.
+       */
+      onForceVisible: '&amp;',
+      /** Called when the user focuses an annotation by hovering it. */
+      onFocus: '&amp;',
+      /** Called when a user selects an annotation. */
+      onSelect: '&amp;',
+      /** Called when a user toggles the expansion state of an annotation thread. */
+      onChangeCollapsed: '&amp;',
+      /** Called to clear the current selection. */
+      onClearSelection: '&amp;',
+    },
+    template: require('../../../templates/client/thread_list.html'),
+  };
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Nov 02 2016 11:41:39 GMT+1100 (AEDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

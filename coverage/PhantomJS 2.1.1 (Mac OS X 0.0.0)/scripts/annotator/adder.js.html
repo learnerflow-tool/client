@@ -1,0 +1,839 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/annotator/adder.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../../index.html">all files</a> / <a href="index.html">scripts/annotator/</a> adder.js
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.89% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>80/90</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">95.45% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>21/22</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">71.43% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>10/14</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.89% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>80/90</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254
+255
+256
+257
+258
+259</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">30×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-yes">29×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">20×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-yes">48×</span>
+<span class="cline-any cline-yes">48×</span>
+<span class="cline-any cline-yes">48×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">4×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">31×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">'use strict';
+&nbsp;
+var classnames = require('classnames');
+&nbsp;
+var template = require('./adder.html');
+&nbsp;
+var ANNOTATE_BTN_CLASS = 'js-annotate-btn';
+var ANNOTATE_BTN_SELECTOR = '.js-annotate-btn';
+&nbsp;
+var HIGHLIGHT_BTN_SELECTOR = '.js-highlight-btn';
+&nbsp;
+/**
+ * Show the adder above the selection with an arrow pointing down at the
+ * selected text.
+ */
+var ARROW_POINTING_DOWN = 1;
+&nbsp;
+/**
+ * Show the adder above the selection with an arrow pointing up at the
+ * selected text.
+ */
+var ARROW_POINTING_UP = 2;
+&nbsp;
+<span class="fstat-no" title="function not covered" >function toPx(pixels) {</span>
+<span class="cstat-no" title="statement not covered" >  r</span>eturn pixels.toString() + 'px';
+}
+&nbsp;
+var ARROW_HEIGHT = 10;
+&nbsp;
+// The preferred gap between the end of the text selection and the adder's
+// arrow position.
+var ARROW_H_MARGIN = 20;
+&nbsp;
+function attachShadow(element) {
+  if (element.attachShadow) {
+    // Shadow DOM v1 (Chrome v53, Safari 10)
+    return element.attachShadow({mode: 'open'});
+  } else if (element.createShadowRoot) {
+    // Shadow DOM v0 (Chrome ~35-52)
+    return element.createShadowRoot();
+  } else {
+    return null;
+  }
+}
+&nbsp;
+/**
+ * Create the DOM structure for the Adder.
+ *
+ * Returns the root DOM node for the adder, which may be in a shadow tree.
+ */
+function createAdderDOM(container) {
+  var element;
+&nbsp;
+  // If the browser supports Shadow DOM, use it to isolate the adder
+  // from the page's CSS
+  //
+  // See https://developers.google.com/web/fundamentals/primers/shadowdom/
+  var shadowRoot = attachShadow(container);
+  if (shadowRoot) {
+    shadowRoot.innerHTML = template;
+    element = shadowRoot.querySelector('.js-adder');
+&nbsp;
+    // Load stylesheets required by adder into shadow DOM element
+    var adderStyles = Array.from(document.styleSheets).map(function (sheet) {
+      return sheet.href;
+    }).filter(function (url) {
+      return (url || '').match(/(icomoon|inject)\.css/);
+    });
+&nbsp;
+    // Stylesheet &lt;link&gt; elements are inert inside shadow roots [1]. Until
+    // Shadow DOM implementations support external stylesheets [2], grab the
+    // relevant CSS files from the current page and `@import` them.
+    //
+    // [1] http://stackoverflow.com/questions/27746590
+    // [2] https://github.com/w3c/webcomponents/issues/530
+    //
+    // This will unfortunately break if the page blocks inline stylesheets via
+    // CSP, but that appears to be rare and if this happens, the user will still
+    // get a usable adder, albeit one that uses browser default styles for the
+    // toolbar.
+    var styleEl = document.createElement('style');
+    styleEl.textContent = adderStyles.map(<span class="fstat-no" title="function not covered" >function (url) {</span>
+<span class="cstat-no" title="statement not covered" >      r</span>eturn '@import "' + url + '";';
+    }).join('\n');
+    shadowRoot.appendChild(styleEl);
+  } else {
+    container.innerHTML = template;
+    element = container.querySelector('.js-adder');
+  }
+  return element;
+}
+&nbsp;
+/**
+ * Annotation 'adder' toolbar which appears next to the selection
+ * and provides controls for the user to create new annotations.
+ *
+ * @param {Element} container - The DOM element into which the adder will be created
+ * @param {Object} options - Options object specifying `onAnnotate` and `onHighlight`
+ *        event handlers.
+ */
+function Adder(container, options) {
+&nbsp;
+  var self = this;
+  var element = createAdderDOM(container);
+&nbsp;
+  Object.assign(container.style, {
+    // Set initial style. The adder is hidden using the `visibility`
+    // property rather than `display` so that we can compute its size in order to
+    // position it before display.
+    display: 'block',
+    visibility: 'hidden',
+&nbsp;
+    // take position out of flow and off screen initially
+    position: 'absolute',
+    top: 0,
+&nbsp;
+    // Assign a high Z-index so that the adder shows above any content on the
+    // page
+    zIndex: 999,
+  });
+&nbsp;
+  this.element = element;
+&nbsp;
+  var view = element.ownerDocument.defaultView;
+  var enterTimeout;
+&nbsp;
+  element.querySelector(ANNOTATE_BTN_SELECTOR)
+    .addEventListener('click', handleCommand);
+  element.querySelector(HIGHLIGHT_BTN_SELECTOR)
+    .addEventListener('click', handleCommand);
+&nbsp;
+  function handleCommand(event) {
+    event.preventDefault();
+    event.stopPropagation();
+&nbsp;
+    var isAnnotateCommand = this.classList.contains(ANNOTATE_BTN_CLASS);
+&nbsp;
+    if (isAnnotateCommand) {
+      options.onAnnotate();
+    } else {
+      options.onHighlight();
+    }
+&nbsp;
+    self.hide();
+  }
+&nbsp;
+  function width() {
+    return element.getBoundingClientRect().width;
+  }
+&nbsp;
+  function height() {
+    return element.getBoundingClientRect().height;
+  }
+&nbsp;
+  /** Hide the adder */
+  this.hide = function () {
+    clearTimeout(enterTimeout);
+    element.className = classnames({'annotator-adder': true});
+    container.style.visibility = 'hidden';
+  };
+&nbsp;
+  /**
+   * Return the best position to show the adder in order to target the
+   * selected text in `targetRect`.
+   *
+   * @param {Rect} targetRect - The rect of text to target, in document
+   *        coordinates.
+   * @param {boolean} isSelectionBackwards - True if the selection was made
+   *        backwards, such that the focus point is mosty likely at the top-left
+   *        edge of `targetRect`.
+   */
+  this.target = function (targetRect, isSelectionBackwards) {
+    // Set the initial arrow direction based on whether the selection was made
+    // forwards/upwards or downwards/backwards.
+    var arrowDirection;
+    if (isSelectionBackwards) {
+      arrowDirection = ARROW_POINTING_DOWN;
+    } else {
+      arrowDirection = ARROW_POINTING_UP;
+    }
+    var top;
+    var left;
+&nbsp;
+    // Position the adder such that the arrow it is above or below the selection
+    // and close to the end.
+    var hMargin = Math.min(ARROW_H_MARGIN, targetRect.width);
+    if (isSelectionBackwards) {
+      left = targetRect.left - width() / 2 + hMargin;
+    } else {
+      left = targetRect.left + targetRect.width - width() / 2 - hMargin;
+    }
+&nbsp;
+    // Flip arrow direction if adder would appear above the top or below the
+    // bottom of the viewport.
+    //
+    // Note: `pageYOffset` is used instead of `scrollY` here for IE
+    // compatibility
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (targetRect.top - height() &lt; view.pageYOffset &amp;&amp;
+        arrowDirection === ARROW_POINTING_DOWN) {
+<span class="cstat-no" title="statement not covered" >      a</span>rrowDirection = ARROW_POINTING_UP;
+    } else if (targetRect.top + height() &gt; view.pageYOffset + view.innerHeight) {
+      arrowDirection = ARROW_POINTING_DOWN;
+    }
+&nbsp;
+    if (arrowDirection === ARROW_POINTING_UP) {
+      top = targetRect.top + targetRect.height + ARROW_HEIGHT;
+    } else {
+      top = targetRect.top - height() - ARROW_HEIGHT;
+    }
+&nbsp;
+    // Constrain the adder to the viewport.
+    left = Math.max(left, view.pageXOffset);
+    left = Math.min(left, view.pageXOffset + view.innerWidth - width());
+&nbsp;
+    top = Math.max(top, view.pageYOffset);
+    top = Math.min(top, view.pageYOffset + view.innerHeight - height());
+&nbsp;
+    return {top: top, left: left, arrowDirection: arrowDirection};
+  };
+&nbsp;
+  /**
+   * Show the adder at the given position and with the arrow pointing in
+   * `arrowDirection`.
+   */
+  this.showAt = <span class="fstat-no" title="function not covered" >function (left, top, arrowDirection) {</span>
+<span class="cstat-no" title="statement not covered" >    e</span>lement.className = classnames({
+      'annotator-adder': true,
+      'annotator-adder--arrow-down': arrowDirection === ARROW_POINTING_DOWN,
+      'annotator-adder--arrow-up': arrowDirection === ARROW_POINTING_UP,
+    });
+&nbsp;
+    // Some sites make big assumptions about interactive
+    // elements on the page. Some want to hide interactive elements
+    // after use. So we need to make sure the button stays displayed
+    // the way it was originally displayed - without the inline styles
+    // See: https://github.com/hypothesis/client/issues/137
+<span class="cstat-no" title="statement not covered" >    t</span>his.element.querySelector(ANNOTATE_BTN_SELECTOR).style.display = '';
+<span class="cstat-no" title="statement not covered" >    t</span>his.element.querySelector(HIGHLIGHT_BTN_SELECTOR).style.display = '';
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    O</span>bject.assign(container.style, {
+      top: toPx(top),
+      left: toPx(left),
+      visibility: 'visible',
+    });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    c</span>learTimeout(enterTimeout);
+<span class="cstat-no" title="statement not covered" >    e</span>nterTimeout = setTimeout(<span class="fstat-no" title="function not covered" >function () {</span>
+<span class="cstat-no" title="statement not covered" >      e</span>lement.className += ' is-active';
+    }, 1);
+  };
+}
+&nbsp;
+module.exports = {
+  ARROW_POINTING_DOWN: ARROW_POINTING_DOWN,
+  ARROW_POINTING_UP: ARROW_POINTING_UP,
+&nbsp;
+  Adder: Adder,
+};
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Nov 02 2016 11:41:39 GMT+1100 (AEDT)
+</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

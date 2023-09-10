@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/view-filter.coffee</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">scripts/</a> view-filter.coffee
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">97.08% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>133/137</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">88.46% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>46/52</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">78.79% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>26/33</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">90.7% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>39/43</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">13 statements, 6 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line high'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">37×</span>
+<span class="cline-any cline-yes">37×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-yes">9×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-yes">19×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-yes">12×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-yes">33×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-yes">18×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">15×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">35×</span>
+<span class="cline-any cline-yes">35×</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">8×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-yes">10×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"><span class="fstat-no" title="function not covered" ></span>module.exports = ['unicode', (unicode) -&gt;
+  _normalize = (e) -&gt;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if typeof e is 'string'
+      normed = unicode.normalize(e)
+      return unicode.fold(normed)
+    else
+      e
+&nbsp;
+  _matches = (filter, value, match) -&gt;
+    matches = true
+&nbsp;
+    for term in filter.terms
+      unless match term, value
+        matches = false
+        if filter.operator is 'and'
+          break
+      else
+        matches = true
+        if filter.operator is 'or'
+          break
+    matches
+&nbsp;
+  _arrayMatches = (filter, value, match) -&gt;
+    matches = true
+    # Make copy for filtering
+    copy = filter.terms.slice()
+&nbsp;
+    copy = copy.filter (e) -&gt;
+      match value, e
+&nbsp;
+    <span class="missing-if-branch" title="if path not taken" >I</span>if (filter.operator is 'and' and copy.length &lt; filter.terms.length) or
+    (filter.operator is 'or' and <span class="branch-3 cbranch-no" title="branch not covered" >not copy.length)</span>
+<span class="cstat-no" title="statement not covered" >      matches = false</span>
+    matches
+&nbsp;
+  _checkMatch = (filter, annotation, checker) -&gt;
+    autofalsefn = checker.autofalse
+    return false if autofalsefn? and autofalsefn annotation
+&nbsp;
+    value = checker.value annotation
+    if angular.isArray value
+      value = value.map (e) -&gt; e.toLowerCase()
+      value = value.map (e) =&gt; _normalize(e)
+      return _arrayMatches filter, value, checker.match
+    else
+      value = value.toLowerCase()
+      value = _normalize(value)
+      return _matches filter, value, checker.match
+&nbsp;
+  # The field configuration
+  #
+  # [facet_name]:
+  #   autofalse: a function for a preliminary false match result
+  #   value: a function to extract to facet value for the annotation.
+  #   match: a function to check if the extracted value matches the facet value
+  fields:
+    quote:
+      autofalse: (annotation) -&gt; return annotation.references?
+      value: (annotation) -&gt;
+        quotes = for t in (annotation.target or [])
+          for s in (t.selector or []) when s.type is 'TextQuoteSelector'
+<span class="cstat-no" title="statement not covered" >            <span class="missing-if-branch" title="if path not taken" >I</span>u</span>nless s.exact then continue
+            s.exact
+        quotes = Array::concat quotes...
+        quotes.join('\n')
+      match: (term, value) -&gt; return value.indexOf(term) &gt; -1
+    since:
+      autofalse: <span class="fstat-no" title="function not covered" >(annotation) -&gt; r</span>eturn not annotation.updated?
+      value: <span class="fstat-no" title="function not covered" >(annotation) -&gt; r</span>eturn annotation.updated
+      match: <span class="fstat-no" title="function not covered" >(term, value) -&gt;</span>
+<span class="cstat-no" title="statement not covered" >        delta = M</span>ath.round((+new Date - new Date(value)) / 1000)
+        return delta &lt;= term
+    tag:
+      autofalse: (annotation) -&gt; return not annotation.tags?
+      value: (annotation) -&gt; return annotation.tags
+      match: (term, value) -&gt; return value in term
+    text:
+      autofalse: (annotation) -&gt; return not annotation.text?
+      value: (annotation) -&gt; return annotation.text
+      match: (term, value) -&gt; return value.indexOf(term) &gt; -1
+    uri:
+      autofalse: <span class="fstat-no" title="function not covered" >(annotation) -&gt; r</span>eturn not annotation.uri?
+      value: <span class="fstat-no" title="function not covered" >(annotation) -&gt; r</span>eturn annotation.uri
+      match: <span class="fstat-no" title="function not covered" >(term, value) -&gt; r</span>eturn value.indexOf(term) &gt; -1
+    user:
+      autofalse: (annotation) -&gt; return not annotation.user?
+      value: (annotation) -&gt; return annotation.user
+      match: (term, value) -&gt; return value.indexOf(term) &gt; -1
+    any:
+      fields: ['quote', 'text', 'tag', 'user']
+&nbsp;
+  # Filters a set of annotations, according to a given query.
+  #
+  # Inputs:
+  #   annotations is the input list of annotations (array)
+  #   filters is the query is a faceted filter generated by `searchFilter`.
+  #
+  # It'll handle the annotation matching by the returned field configuration.
+  #
+  # Returns Array of the matched annotation ids.
+  filter: (annotations, filters) -&gt;
+    limit = Math.min((filters.result?.terms or [])...)
+    count = 0
+&nbsp;
+    # Normalizing the filters, need to do only once.
+    for _, filter of filters
+      <span class="missing-if-branch" title="else path not taken" >E</span>if filter.terms
+        filter.terms = filter.terms.map (e) =&gt;
+          e = e.toLowerCase()
+          e = _normalize e
+          e
+&nbsp;
+    for annotation in annotations
+<span class="cstat-no" title="statement not covered" >      <span class="missing-if-branch" title="if path not taken" >I</span>b</span>reak if count &gt;= limit
+&nbsp;
+      match = true
+      for category, filter of filters
+        break unless match
+        continue unless filter.terms.length
+&nbsp;
+        switch category
+          when 'any'
+            categoryMatch = false
+            for field in @fields.any.fields
+              for term in filter.terms
+                termFilter = {terms: [term], operator: "and"}
+                if _checkMatch(termFilter, annotation, @fields[field])
+                  categoryMatch = true
+                  break
+            match = categoryMatch
+          else
+            match = _checkMatch filter, annotation, @fields[category]
+&nbsp;
+      continue unless match
+      count++
+      annotation.id
+]
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Nov 02 2016 11:41:39 GMT+1100 (AEDT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>

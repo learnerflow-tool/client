@@ -1,0 +1,612 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for scripts/search-filter.coffee</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../prettify.css" />
+    <link rel="stylesheet" href="../base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="../index.html">all files</a> / <a href="index.html">scripts/</a> search-filter.coffee
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">70.91% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>78/110</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">57.89% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>33/57</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">100% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>9/9</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">56.14% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>32/57</span>
+      </div>
+      <div class='fl pad1y'>
+        <span class="strong">10 statements, 7 branches</span>
+        <span class="quiet">Ignored</span>  &nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182</td><td class="line-coverage quiet"><span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">43×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">28×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36×</span>
+<span class="cline-any cline-yes">36×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">6×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-yes">22×</span>
+<span class="cline-any cline-yes">14×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">5×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">7×</span>
+<span class="cline-any cline-yes">21×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-yes">1×</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js"># This class will parse the search filter and produce a faceted search filter object
+# It expects a search query string where the search term are separated by space character
+# and collects them into the given term arrays
+module.exports = class SearchFilter
+  # Splits a search term into filter and data
+  # i.e.
+  #   'user:johndoe' -&gt; ['user', 'johndoe']
+  #   'example:text' -&gt; [null, 'example:text']
+  _splitTerm: (term) -&gt;
+    filter = term.slice 0, term.indexOf ":"
+    <span class="missing-if-branch" title="if path not taken" >I</span>unless filter?
+      # The whole term is data
+      return [null, term]
+&nbsp;
+    if filter in ['group', 'quote', 'result', 'since',
+                  'tag', 'text', 'uri', 'user']
+      data = term[filter.length+1..]
+      return [filter, data]
+    else
+      # The filter is not a power search filter, so the whole term is data
+      return [null, term]
+&nbsp;
+  # This function will slice the search-text input
+  # Slice character: space,
+  # but an expression between quotes (' or ") is considered one
+  # I.e from the string: "text user:john 'to be or not to be' it will produce:
+  # ["text", "user:john", "to be or not to be"]
+  _tokenize: (searchtext) -&gt;
+    <span class="missing-if-branch" title="if path not taken" >I</span>return [] unless searchtext
+&nbsp;
+    # Small helper function for removing quote characters
+    # from the beginning- and end of a string, if the
+    # quote characters are the same.
+    # I.e.
+    #   'foo' -&gt; foo
+    #   "bar" -&gt; bar
+    #   'foo" -&gt; 'foo"
+    #   bar"  -&gt; bar"
+    _removeQuoteCharacter = (text) -&gt;
+      start = text.slice 0,1
+      end = text.slice -1
+      <span class="missing-if-branch" title="if path not taken" >I</span>i</span>f (start is '"' or start is "'") and (<span class="branch-2 cbranch-no" title="branch not covered" >start == end)
+<span class="cstat-no" title="statement not covered" >        text = text.slice 1, text.length - 1</span>
+      text
+&nbsp;
+    tokens = searchtext.match /(?:[^\s"']+|"[^"]*"|'[^']*')+/g
+&nbsp;
+    # Cut the opening and closing quote characters
+    tokens = tokens.map _removeQuoteCharacter
+&nbsp;
+    # Remove quotes for power search.
+    # I.e. 'tag:"foo bar"' -&gt; 'tag:foo bar'
+    for token, index in tokens
+      [filter, data] = @_splitTerm(token)
+      if filter?
+        tokens[index] = filter + ':' + (_removeQuoteCharacter data)
+&nbsp;
+    tokens
+&nbsp;
+  # Turns string query into object, where the properties are the search terms
+  toObject: (searchtext) -&gt;
+    obj = {}
+    filterToBackendFilter = (filter) -&gt;
+      <span class="missing-if-branch" title="if path not taken" >I</span>if filter is 'tag'
+        'tags'
+      else
+        filter
+&nbsp;
+    addToObj = (key, data) -&gt;
+      if obj[key]?
+        obj[key].push data
+      else
+        obj[key] = [data]
+&nbsp;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if searchtext
+      terms = @_tokenize(searchtext)
+      for term in terms
+        [filter, data] = @_splitTerm(term)
+        unless filter?
+          filter = 'any'
+          data = term
+        addToObj(filterToBackendFilter(filter), data)
+    obj
+&nbsp;
+  # This function will generate the facets from the search-text input
+  # It'll first tokenize it and then sorts them into facet lists
+  # The output will be a dict with the following structure:
+  # An object with facet_names as keys.
+  # A value for a key:
+  # [facet_name]:
+  #   [operator]: 'and'|'or'|'min' (for the elements of the facet terms list)
+  #   [lowercase]: true|false
+  #   [terms]: an array for the matched terms for this facet
+  # The facet selection is done by analyzing each token.
+  # It generally expects a &lt;facet_name&gt;:&lt;facet_term&gt; structure for a token
+  # Where the facet names are: 'quote', 'result', 'since', 'tag', 'text', 'uri', 'user
+  # Anything that didn't match go to the 'any' facet
+  # For the 'since' facet the the time string is scanned and is converted to seconds
+  # So i.e the 'since:7min' token will be converted to 7*60 = 420 for the since facet value
+  generateFacetedFilter: (searchtext) -&gt;
+    any = []
+    quote = []
+    result = []
+    since = []
+    tag = []
+    text = []
+    uri = []
+    user = []
+&nbsp;
+    <span class="missing-if-branch" title="else path not taken" >E</span>if searchtext
+      terms = @_tokenize(searchtext)
+      for term in terms
+        filter = term.slice 0, term.indexOf ":"
+        <span class="missing-if-branch" title="if path not taken" >I</span>u</span>nless filter? then <span class="cstat-no" title="statement not covered" >filter = ""
+<span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" ><span class="cstat-no" title="statement not covered" >        s</span></span></span></span></span></span></span>witch filter
+          when '</span>quote' then <span class="cstat-no" title="statement not covered" >quote.push term[6..]
+          when '</span>result' then <span class="cstat-no" title="statement not covered" >result.push term[7..]
+          when 'since'
+            # We'll turn this into seconds
+<span class="cstat-no" title="statement not covered" >            time = t</span>erm[6..].toLowerCase()
+            if time.match /^\d+$/
+              # Only digits, assuming seconds
+<span class="cstat-no" title="statement not covered" >              since.push time</span>
+            if time.match /^\d+sec$/
+              # Time given in seconds
+<span class="cstat-no" title="statement not covered" >              t = /^(\d+)sec$/.exec(time)[1</span>]
+<span class="cstat-no" title="statement not covered" >              since.push t</span>
+            if time.match /^\d+min$/
+              # Time given in minutes
+<span class="cstat-no" title="statement not covered" >              t = /^(\d+)min$/.exec(time)[1</span>]
+<span class="cstat-no" title="statement not covered" >              since.push t * 60</span>
+            if time.match /^\d+hour$/
+              # Time given in hours
+<span class="cstat-no" title="statement not covered" >              t = /^(\d+)hour$/.exec(time)[1</span>]
+<span class="cstat-no" title="statement not covered" >              since.push t * 60 * 60</span>
+            if time.match /^\d+day$/
+              # Time given in days
+<span class="cstat-no" title="statement not covered" >              t = /^(\d+)day$/.exec(time)[1</span>]
+<span class="cstat-no" title="statement not covered" >              since.push t * 60 * 60 * 24</span>
+            if time.match /^\d+week$/
+              # Time given in week
+<span class="cstat-no" title="statement not covered" >              t = /^(\d+)week$/.exec(time)[1</span>]
+<span class="cstat-no" title="statement not covered" >              since.push t * 60 * 60 * 24 * 7</span>
+            if time.match /^\d+month$/
+              # Time given in month
+<span class="cstat-no" title="statement not covered" >              t = /^(\d+)month$/.exec(time)[1</span>]
+<span class="cstat-no" title="statement not covered" >              since.push t * 60 * 60 * 24 * 30</span>
+<span class="cstat-no" title="statement not covered" >            if time.match /^\d+year$/</span>
+              # Time given in year
+<span class="cstat-no" title="statement not covered" >              t = /^(\d+)year$/.exec(time)[1</span>]
+<span class="cstat-no" title="statement not covered" >              since.push t * 60 * 60 * 24 * 365</span>
+          when '</span>tag' then <span class="cstat-no" title="statement not covered" >tag.push term[4..]
+          when '</span>text' then <span class="cstat-no" title="statement not covered" >text.push term[5..]
+          when '</span>uri' then <span class="cstat-no" title="statement not covered" >uri.push term[4..]
+          when '</span>user' then <span class="cstat-no" title="statement not covered" >user.push term[5..]
+          else any.push term
+&nbsp;
+    any:
+      terms: any
+      operator: 'and'
+    quote:
+      terms: quote
+      operator: 'and'
+    result:
+      terms: result
+      operator: 'min'
+    since:
+      terms: since
+      operator: 'and'
+    tag:
+      terms: tag
+      operator: 'and'
+    text:
+      terms: text
+      operator: 'and'
+    uri:
+      terms: uri
+      operator: 'or'
+    user:
+      terms: user
+      operator: 'or'
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Wed Nov 02 2016 11:41:39 GMT+1100 (AEDT)
+</div>
+</div>
+<script src="../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../sorter.js"></script>
+</body>
+</html>
